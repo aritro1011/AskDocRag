@@ -3,10 +3,10 @@ from retriever import add_document_to_chroma, retrieve_relevant_chunks
 from generator import generate_answer
 from utils import extract_text_from_pdf, extract_text_from_docx
 
-# Page Configuration
+
 st.set_page_config(page_title="AskDoc AI", page_icon="🤖", layout="wide")
 
-# Custom CSS for Styling
+
 st.markdown("""
     <style>
         body { font-family: 'Courier New', monospace; }
@@ -28,14 +28,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Theme Toggle
+
 if 'theme' not in st.session_state:
     st.session_state.theme = 'light'
 
 if st.button("🌙 Toggle Theme" if st.session_state.theme == 'light' else "☀️ Toggle Theme"):
     st.session_state.theme = 'dark' if st.session_state.theme == 'light' else 'light'
 
-# Apply Theme
+
 if st.session_state.theme == 'dark':
     st.markdown("""
         <style>
@@ -47,13 +47,12 @@ if st.session_state.theme == 'dark':
         </style>
     """, unsafe_allow_html=True)
 
-# Header
 st.markdown("<h1 style='text-align: center;'>🤖 AskDoc AI</h1>", unsafe_allow_html=True)
 
-# Layout
+
 col1, col2 = st.columns([1, 2])
 
-# 📥 Document Upload Card
+
 with col1:
     st.markdown("<div class='card'>", unsafe_allow_html=True)
     st.subheader("📄 Upload Document")
@@ -68,7 +67,6 @@ with col1:
         st.success(f"{uploaded_file.name} uploaded and processed successfully!")
     st.markdown("</div>", unsafe_allow_html=True)
 
-# ❓ Query & Response Card
 with col2:
     st.markdown("<div class='card'>", unsafe_allow_html=True)
     st.subheader("💬 Ask a Question")
