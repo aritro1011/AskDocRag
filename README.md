@@ -11,6 +11,13 @@ AskDoc AI is an intelligent document-based Question Answering (QA) application p
 - 💼 **Modern UI:** Stylish, card-based layout with subtle animations and responsive design.
 
 ---
+## Working Demo of My Webapp
+
+Here is a working demo of my webapp:
+
+![Demo Image](RAGdemo.jpg)
+
+---
 
 ## 📂 Directory Structure
 ```
