@@ -4,3 +4,5 @@ chromadb
 google-generative-ai
 pdfplumber
 python-docx
+
+
