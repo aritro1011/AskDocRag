@@ -1,8 +1,6 @@
 streamlit
 sentence-transformers
 chromadb
-google-generative-ai
+google-generative-ai==0.3.2
 pdfplumber
 python-docx
-
-
